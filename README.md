@@ -1,7 +1,5 @@
 # Portfolio ¡Hola, bienvenido a mi proyecto de portafolio!
 
-(https://github.com/alexrosmen/portafolio/blob/main/Img.png)
-
 ## Herramientas utilizadas:
 
 * HTML
