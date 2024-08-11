@@ -55,19 +55,20 @@ body {
     align-items: center;
     margin: 3% 8%;
     justify-content: space-between;
-    gap: 80px;
+    gap: 40px;
 }
 
 .presentacion_contenido {
     max-width: 615px; /* Cambio a max-width para mayor flexibilidad*/
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
 }
 
 .presentacion_contenido_titulo {
     font-size: 30px;
     font-family: var(--fuente-krona);
+    margin: 0;
 }
 
 .presentacion_contenido_texto {
@@ -77,10 +78,8 @@ body {
 
 .presentacion_enlaces {
     display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    gap: 32px;
+    justify-content: center;
+    gap: 20px;
 }
 
 .presentacion_enlaces_subtitulo {
@@ -90,16 +89,16 @@ body {
 }
 
 .presentacion_enlaces_link {
-    width: 330px;
-    text-align: center;
-    padding: 21.5px 0;
-    border-radius: 8px;
-    font-family: var(--fuente-Montserrat);
-    font-size: 24px;
-    font-weight: 600;
-    text-decoration: none;
+    width: 100px;
+    /*text-align: center;*/
+    padding: 15px 0;
+    /*border-radius: 8px;*/
+    /*font-family: var(--fuente-Montserrat);*/
+    /*font-size: 18px;*/
+    /*font-weight: 600;*/
+    /*text-decoration: none;*/
     color: var(--color-secundario);
-    border: 2px solid var(--color-terciario);    
+    /*border: 6px solid var(--color-terciario);*/    
 }
 
 .presentacion_enlaces_link:hover {
@@ -108,8 +107,9 @@ body {
 }
 
 .presentacion_imagen {
-    width: 50%;
+    width: 30%;
     height: auto; /* Cambio a auto para mantener la proporción de la imagen */
+    align-self: flex-start;
 }
 
 .icon {
@@ -121,12 +121,20 @@ body {
 
 .footer {
     background-color: var(--color-terciario);
-    padding: 20px;
+    padding: 20px 10%;
     color: var(--color-primario);
     text-align: center;
     font-family: var(--fuente-Montserrat);
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 400;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #ffffff;
+}
+
+.footer p {
+    margin: 0;
 }
 
 /* Estilo responsivo*/
@@ -170,6 +178,10 @@ body {
         font-size: 20px; /* Reduce el tamaño de la fuente en los enlaces*/
         width: 100%; /* Los enlaces ocupan todo el ancho disponible*/
 
+    }
+    .footer {
+        padding: 15px 5%;
+        font-size: 16px;
     }
 
 }
