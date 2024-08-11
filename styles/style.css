@@ -14,22 +14,24 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box; /* Asegura que el padding y border se incluyan en las dimensiones del elemento */
 }
 
 body {
     background-color: var(--color-primario);
     color: var(--color-secundario);
     height: 100vh;
-    box-sizing: border-box;
+    font-family: var(--fuente-Montserrat);
 }
 
 .header {
-    padding: 2% 0% 0% 8%;
+    padding: 2% 8%;
 }
 
 .header_menu {
     display: flex;
     gap: 80px;
+    justify-content: flex-start;
 }
  
 .header_menu_link {
@@ -38,6 +40,10 @@ body {
     font-weight: 600;
     color: var(--color-terciario);
     text-decoration: none;
+}
+
+.header_menu_link:hover {
+    color: var(--color-secundario); /* Agregado para un efecto hover en los enlaces del menú */
 }
 
 .titulo-destaque {
@@ -53,7 +59,7 @@ body {
 }
 
 .presentacion_contenido {
-    width: 615px;
+    max-width: 615px; /* Cambio a max-width para mayor flexibilidad*/
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -98,16 +104,12 @@ body {
 
 .presentacion_enlaces_link:hover {
     background-color: var(--color-hover);
+    color: var(--color-secundario);
 }
 
 .presentacion_imagen {
     width: 50%;
-    height: 50%;
-}
-
-img {
-    width: 500px;
-    height: 500px;    
+    height: auto; /* Cambio a auto para mantener la proporción de la imagen */
 }
 
 .icon {
@@ -127,7 +129,8 @@ img {
     font-weight: 400;
 }
 
-@media (max-width: 1200px) {
+/* Estilo responsivo*/
+@media (max-width: 780px) {
 
     .header {
         padding: 5%;
@@ -135,9 +138,38 @@ img {
 
     .header_menu {
         justify-content: center;
+        flex-wrap: wrap; /* Permite que los enlaces se ajusten a multiples lineas si es necesario */
+        gap: 20px; /* Reduce el espacio entre enlaces para pantallas mas pequeñas */
     }
 
     .presentacion {
         flex-direction: column-reverse;
+        gap: 20px; /* Reduce el espacio entre el texto y la imagen*/
+        text-align: center; /* Centra el texto en pantallas pequeñas*/
     }
+
+    .presentacion_contenido {
+        width: 100%; /* Asegura que el contenido ocupe todo el ancho disponible */
+        max-width: none; /* Elimina la restrincion de max-width en pantallas pequeñas*/
+    }
+
+    .presentacion_imagen {
+        width: 100%; /* la imagen ocupa todo el ancho en pantallas pequeñas*/
+        height: auto;
+    }
+
+    .presentacion_contenido_titulo {
+        font-size: 24px; /* Reduce el tamaño de la fuente del título*/
+    }
+
+    .presentacion_contenido_texto {
+        font-size: 18px; /* Reduce el tamaño de la fuente del texto*/
+    }
+
+    .presentacion_enlaces_link {
+        font-size: 20px; /* Reduce el tamaño de la fuente en los enlaces*/
+        width: 100%; /* Los enlaces ocupan todo el ancho disponible*/
+
+    }
+
 }
